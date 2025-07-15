@@ -1,0 +1,78 @@
+ @font-face {
+      font-family: 'Graphik';
+      src: url('GraphikRegular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Graphik';
+      src: url('GraphikBold.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --text: #19190B;
+      --accent: #19190B;
+      --font-main: 'Graphik', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-main);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: var(--text);
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--bg);
+      color: var(--text);
+      text-decoration: none;
+      border: 2px solid var(--text);
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+      margin: 0.5rem;
+    }
+
+    a.button:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
