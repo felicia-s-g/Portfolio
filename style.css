@@ -76,3 +76,41 @@
       background: var(--text);
       color: var(--bg);
     }
+
+/* special button styling */
+a.button.special {
+  position: relative;
+  overflow: hidden;
+  border-color: gold;
+  color: #19190B;
+  background: #fff8dc; /* subtle warm bg */
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.3), 0 0 10px rgba(255, 215, 0, 0.2);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+  }
+}
+
+a.button.special::before {
+  content: "✨";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 1.2rem;
+  animation: sparkle 3s infinite linear;
+}
+
+@keyframes sparkle {
+  0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  25%  { transform: translate(120%, 50%) rotate(45deg); opacity: 1; }
+  50%  { transform: translate(220%, -20%) rotate(90deg); opacity: 0; }
+  75%  { transform: translate(320%, 60%) rotate(135deg); opacity: 1; }
+  100% { transform: translate(420%, 0) rotate(180deg); opacity: 0; }
+}
